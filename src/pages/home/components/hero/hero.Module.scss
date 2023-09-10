@@ -1,0 +1,141 @@
+@import "../../../../variables.scss";
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .container__main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        .container__image {
+            width: 100%;
+            height: 0;
+            padding-bottom: 90%;
+            background-image: url("../../../../assets/images/image-web-3-mobile.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container__body {
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+
+            .container__title {
+                font-size: 2.5rem;
+                line-height: 110%;
+                font-weight: 800
+            }
+
+            .container__text__area {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .container__text__area__text {
+                    opacity: 50%;
+                    line-height: 170%;                   
+                }
+
+                .container__text__area__button {
+                    background-color: $secondary;
+                    border: none;
+                    color: white;
+                    letter-spacing: .25rem;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    padding: 1rem 2rem;
+                    width: fit-content;
+
+                    &:hover {
+                        background-color: $dark-blue;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .container__body {
+                flex-direction: row;
+                gap: 4rem;
+
+                .container__title {
+                    width: 100%;
+                    font-size: 3.5rem;
+                }
+
+                .container__text__area {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px){
+        .container__main {
+            gap: 2rem;
+            width: 66%;
+
+            .container__image {
+                padding-bottom: 40%;
+            }
+        }
+    }
+
+    .container__side {
+        padding: 1.5rem;
+        background-color: $dark-blue;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media screen and (min-width: 1024px) {
+            width: 33%;
+        }
+
+        .container__side__text {
+            color: $primary;
+            font-size: 2rem;
+            font-weight: 600
+        }   
+
+        .container__news__card {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            width: 100%;
+            margin: 2rem 0;
+
+            .container__news__card__title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: $off-white;
+            }
+
+            .container__news__card__text {
+                font-weight: 100;
+                opacity: 50%;
+                color: $off-white;
+                line-height: 1.5rem;
+                word-spacing: .05rem;
+            }
+        }
+
+        .container__side__separator {
+            width: 100%;
+            height: .25px;
+            opacity: 50%;
+            background-color: $off-white;
+        }
+    }
+}
